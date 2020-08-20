@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://nitinkumud.github.io/Gif-Application/",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
