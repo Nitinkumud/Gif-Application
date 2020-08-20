@@ -33,8 +33,21 @@
   overflow: hidden;
 }
 
-.predictedWords {
-  border: 1px solid rebeccapurple;
-  height: 15px;
+.gif-container {
+  width: 100%;
+  display: block;
 
+}
+
+.example-button-row {
+  display: table-cell;
+}
+
+.outer-container-words {
+  display: table;
+  margin-left: 2%;
+}
+
+.words-button {
+  margin: 5px;
 }

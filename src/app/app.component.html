@@ -13,17 +13,21 @@
     </mat-toolbar>
   </p>
 
-  <div *ngFor="let words of predictedWords">
-    <mat-card class="predictedWords" (click)="getSelectedWord(words)">
-      <span>{{words}}</span>
-    </mat-card>
+  <div class="outer-container-words">
+    <div class="example-button-row">
+      <button mat-raised-button color="primary" *ngFor="let words of predictedWords" class="words-button"
+        (click)="getSelectedWord(words)">{{words}}</button>
+    </div>
   </div>
 
-  <cdk-virtual-scroll-viewport itemSize='6' class="container">
-    <div class="gif" *cdkVirtualFor="let item of gifData">
-      <mat-card class="example-card">
-        <img mat-card-image src={{item.media[0].nanogif.url}} alt="gif">
-      </mat-card>
-    </div>
-  </cdk-virtual-scroll-viewport>
+
+  <div class="gif-container">
+    <cdk-virtual-scroll-viewport itemSize='6' class="container">
+      <div class="gif" *cdkVirtualFor="let item of gifData">
+        <mat-card class="example-card">
+          <img mat-card-image src={{item.media[0].nanogif.url}} alt="gif">
+        </mat-card>
+      </div>
+    </cdk-virtual-scroll-viewport>
+  </div>
 </div>
